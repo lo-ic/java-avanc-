@@ -1,19 +1,21 @@
 package com.projet.projetjava.model;
 
-public class Product {
+import org.springframework.beans.factory.annotation.Qualifier;
+
+public class Personnage {
     private int id;
     private String nom;
-    private int prix;
+    private String type;
 
 
-    public Product(){
+    public Personnage(){
 
     }
 
-    public Product(int id, String nom, int prix) {
+    public Personnage( int id, String nom, String type) {
         this.id = id;
         this.nom = nom;
-        this.prix = prix;
+        this.type = type;
     }
 
     public int getId() {
@@ -32,12 +34,12 @@ public class Product {
         this.nom = nom;
     }
 
-    public int getPrix() {
-        return prix;
+    public String getType() {
+        return type;
     }
 
-    public void setPrix(int prix) {
-        this.prix = prix;
+    public void setType(String type) {
+        this.type = type;
     }
 
 
